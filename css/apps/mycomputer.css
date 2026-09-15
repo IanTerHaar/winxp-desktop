@@ -1,0 +1,10 @@
+/* Shared by My Computer and Recycle Bin (.mycomputer-body) */
+.mycomputer-body { padding: 10px; }
+.mycomputer-body h3 { font-size: 12px; margin: 6px 0; color: #003; border-bottom: 1px solid #ccc; padding-bottom: 2px; }
+.drive-grid { display: grid; grid-template-columns: repeat(auto-fill, 90px); gap: 12px; margin-top: 6px; }
+.drive {
+  text-align: center; cursor: pointer; padding: 6px; border-radius: 4px;
+}
+.drive:hover { background: #d3e5fa; }
+.drive-icon { font-size: 36px; }
+.drive-label { font-size: 11px; margin-top: 4px; }

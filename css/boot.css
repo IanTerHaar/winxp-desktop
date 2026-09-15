@@ -1,0 +1,24 @@
+/* ============ Boot screen ============ */
+#boot {
+  position: fixed; inset: 0; background: #000; z-index: 9999;
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  color: #fff;
+}
+.boot-inner { text-align: center; }
+.boot-logo { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 32px; }
+.boot-flag { width: 60px; height: 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 3px; transform: perspective(300px) rotateY(-25deg); }
+.boot-flag .q { border-radius: 3px 6px 3px 3px; }
+.q1 { background: #ff2020; } .q2 { background: #7cff20; }
+.q3 { background: #2094ff; } .q4 { background: #ffcc20; }
+.boot-text { text-align: left; }
+.boot-brand { font-size: 14px; color: #aaa; }
+.boot-brand-big { font-size: 42px; font-weight: 300; letter-spacing: 1px; }
+.boot-brand-big .xp { font-style: italic; color: #ffcc20; font-weight: 700; margin-left: 4px; }
+.boot-bar { width: 240px; height: 14px; background: #000; border: 1px solid #444; border-radius: 8px; overflow: hidden; margin: 0 auto; }
+.boot-bar-inner {
+  width: 60px; height: 100%;
+  background: linear-gradient(90deg, transparent, #2094ff, transparent);
+  animation: boot 1.6s linear infinite;
+}
+@keyframes boot { 0% { transform: translateX(-60px); } 100% { transform: translateX(240px); } }
+.boot-copy { margin-top: 40px; color: #666; font-size: 10px; }

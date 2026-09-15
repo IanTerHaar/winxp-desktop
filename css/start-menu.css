@@ -1,0 +1,43 @@
+/* ============ Start menu ============ */
+#start-menu {
+  position: absolute; bottom: 30px; left: 0;
+  width: 380px; z-index: 200;
+  background: #fff; border: 1px solid #0a3b9c;
+  border-radius: 8px 8px 0 0; overflow: hidden;
+  box-shadow: 3px -3px 10px rgba(0,0,0,0.3);
+  display: flex; flex-direction: column;
+}
+.sm-header {
+  background: linear-gradient(90deg, #1670e2 0%, #2b8ce5 100%);
+  padding: 8px 12px; display: flex; align-items: center; gap: 10px;
+  border-bottom: 3px solid #f39a35;
+}
+.sm-avatar {
+  width: 40px; height: 40px; background: #fff;
+  border: 2px solid #ffb84d; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center; font-size: 24px;
+}
+.sm-user { color: #fff; font-size: 15px; font-weight: 700; text-shadow: 1px 1px 1px rgba(0,0,0,0.4); }
+.sm-body { display: flex; background: linear-gradient(90deg, #fff 50%, #d3e5fa 50%); }
+.sm-col { flex: 1; padding: 6px 4px; }
+.sm-left { border-right: 1px solid #b8d0e8; }
+.sm-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 4px 8px; border-radius: 3px; cursor: pointer;
+  font-size: 12px; color: #000;
+}
+.sm-item small { color: #666; margin-left: auto; font-size: 10px; }
+.sm-item span { font-size: 20px; }
+.sm-item:hover { background: linear-gradient(90deg, #2f71cd, #4a92e5); color: #fff; }
+.sm-item:hover small { color: #d0e2fa; }
+.sm-sep { height: 1px; background: #b8d0e8; margin: 4px 8px; }
+.sm-footer {
+  background: linear-gradient(180deg, #d3e5fa, #b0cff0);
+  border-top: 1px solid #7ba7d9;
+  display: flex; justify-content: flex-end; gap: 12px; padding: 6px 12px;
+}
+.sm-btn {
+  background: transparent; border: none; color: #000; font-size: 12px;
+  display: flex; align-items: center; gap: 4px;
+}
+.sm-btn:hover { text-decoration: underline; }

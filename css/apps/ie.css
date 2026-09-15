@@ -1,0 +1,11 @@
+.ie-body { display: flex; flex-direction: column; height: 100%; }
+.ie-toolbar {
+  background: linear-gradient(180deg, #f6f6f6, #d8d8d8);
+  border-bottom: 1px solid #999; padding: 4px 6px; display: flex; gap: 4px; align-items: center;
+}
+.ie-toolbar input {
+  flex: 1; border: 1px solid #7f9db9; padding: 2px 4px; font-size: 12px;
+}
+.ie-content { flex: 1; padding: 20px; overflow: auto; background: #fff; }
+.ie-content h1 { font-size: 22px; color: #003399; }
+.ie-content a { color: #0000ee; }

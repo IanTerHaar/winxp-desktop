@@ -1,0 +1,41 @@
+/* ============ Desktop / Wallpaper (Bliss-inspired) ============ */
+#desktop { position: fixed; inset: 0; overflow: hidden; }
+#wallpaper {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 90% 55% at 50% 100%, #5aa02c 0%, #3d7a1a 55%, #2c5a12 100%),
+    linear-gradient(180deg, #4a90e2 0%, #7cc0ff 40%, #b6dcff 65%, #d8f0c0 66%, #7db94a 90%);
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+}
+#wallpaper::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 68%;
+  background:
+    radial-gradient(80px 30px at 20% 25%, rgba(255,255,255,0.7), transparent 60%),
+    radial-gradient(120px 40px at 65% 15%, rgba(255,255,255,0.5), transparent 60%),
+    radial-gradient(60px 20px at 85% 35%, rgba(255,255,255,0.6), transparent 60%);
+}
+#wallpaper::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 40%;
+  background:
+    radial-gradient(ellipse 60% 100% at 30% 100%, rgba(255,255,255,0.15), transparent 70%),
+    radial-gradient(ellipse 70% 100% at 80% 100%, rgba(0,0,0,0.15), transparent 70%);
+}
+
+/* ============ Desktop icons ============ */
+#icons {
+  position: absolute; top: 10px; left: 10px;
+  display: grid; grid-template-columns: 76px; gap: 8px; z-index: 1;
+}
+.icon {
+  width: 76px; padding: 4px; text-align: center; cursor: pointer;
+  border: 1px dotted transparent;
+}
+.icon:hover .icon-img { filter: brightness(1.15); }
+.icon.selected { background: rgba(49, 106, 197, 0.4); border: 1px dotted rgba(255,255,255,0.4); }
+.icon-img { font-size: 40px; line-height: 1; text-shadow: 1px 1px 2px rgba(0,0,0,0.6); }
+.icon-label {
+  color: #fff; font-size: 11px; margin-top: 2px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.6);
+  word-wrap: break-word;
+}

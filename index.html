@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Windows XP</title>
+<link rel="stylesheet" href="./css/base.css" />
+<link rel="stylesheet" href="./css/boot.css" />
+<link rel="stylesheet" href="./css/desktop.css" />
+<link rel="stylesheet" href="./css/window.css" />
+<link rel="stylesheet" href="./css/taskbar.css" />
+<link rel="stylesheet" href="./css/start-menu.css" />
+<link rel="stylesheet" href="./css/shutdown.css" />
+<link rel="stylesheet" href="./css/apps/notepad.css" />
+<link rel="stylesheet" href="./css/apps/mycomputer.css" />
+<link rel="stylesheet" href="./css/apps/ie.css" />
+<link rel="stylesheet" href="./css/apps/paint.css" />
+<link rel="stylesheet" href="./css/apps/minesweeper.css" />
+<link rel="stylesheet" href="./css/apps/about.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪟%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- Boot screen -->
+<div id="boot">
+  <div class="boot-inner">
+    <div class="boot-logo">
+      <div class="boot-flag">
+        <span class="q q1"></span><span class="q q2"></span>
+        <span class="q q3"></span><span class="q q4"></span>
+      </div>
+      <div class="boot-text">
+        <div class="boot-brand">Microsoft<sup>®</sup></div>
+        <div class="boot-brand-big">Windows<span class="xp">XP</span></div>
+      </div>
+    </div>
+    <div class="boot-bar"><div class="boot-bar-inner"></div></div>
+    <div class="boot-copy">Copyright © Microsoft Corporation</div>
+  </div>
+</div>
+
+<!-- Desktop -->
+<div id="desktop" hidden>
+  <div id="wallpaper"></div>
+
+  <div id="icons">
+    <div class="icon" data-app="mycomputer">
+      <div class="icon-img">🖥️</div><div class="icon-label">My Computer</div>
+    </div>
+    <div class="icon" data-app="recycle">
+      <div class="icon-img">🗑️</div><div class="icon-label">Recycle Bin</div>
+    </div>
+    <div class="icon" data-app="ie">
+      <div class="icon-img">🌐</div><div class="icon-label">Internet Explorer</div>
+    </div>
+    <div class="icon" data-app="notepad">
+      <div class="icon-img">📝</div><div class="icon-label">Notepad</div>
+    </div>
+    <div class="icon" data-app="minesweeper">
+      <div class="icon-img">💣</div><div class="icon-label">Minesweeper</div>
+    </div>
+    <div class="icon" data-app="paint">
+      <div class="icon-img">🎨</div><div class="icon-label">Paint</div>
+    </div>
+    <div class="icon" data-app="about">
+      <div class="icon-img">ℹ️</div><div class="icon-label">About</div>
+    </div>
+  </div>
+
+  <!-- Windows are injected here -->
+  <div id="windows"></div>
+
+  <!-- Taskbar -->
+  <div id="taskbar">
+    <button id="start-btn">
+      <span class="start-flag">
+        <span class="q q1"></span><span class="q q2"></span>
+        <span class="q q3"></span><span class="q q4"></span>
+      </span>
+      <span class="start-text">start</span>
+    </button>
+    <div id="task-list"></div>
+    <div id="tray">
+      <span class="tray-icon" title="Volume">🔊</span>
+      <span class="tray-icon" title="Security">🛡️</span>
+      <span id="clock"></span>
+    </div>
+  </div>
+
+  <!-- Start menu -->
+  <div id="start-menu" hidden>
+    <div class="sm-header">
+      <div class="sm-avatar">👤</div>
+      <div class="sm-user">User</div>
+    </div>
+    <div class="sm-body">
+      <div class="sm-col sm-left">
+        <div class="sm-item" data-app="ie"><span>🌐</span>Internet<small>Internet Explorer</small></div>
+        <div class="sm-item" data-app="notepad"><span>📝</span>E-mail<small>Outlook Express</small></div>
+        <div class="sm-sep"></div>
+        <div class="sm-item" data-app="notepad"><span>📝</span>Notepad</div>
+        <div class="sm-item" data-app="paint"><span>🎨</span>Paint</div>
+        <div class="sm-item" data-app="minesweeper"><span>💣</span>Minesweeper</div>
+        <div class="sm-item" data-app="mycomputer"><span>🖥️</span>My Computer</div>
+        <div class="sm-item" data-app="about"><span>ℹ️</span>About</div>
+      </div>
+      <div class="sm-col sm-right">
+        <div class="sm-item"><span>📄</span>My Documents</div>
+        <div class="sm-item"><span>🖼️</span>My Pictures</div>
+        <div class="sm-item"><span>🎵</span>My Music</div>
+        <div class="sm-item" data-app="mycomputer"><span>🖥️</span>My Computer</div>
+        <div class="sm-sep"></div>
+        <div class="sm-item"><span>⚙️</span>Control Panel</div>
+        <div class="sm-item"><span>🔍</span>Search</div>
+        <div class="sm-item"><span>❓</span>Help and Support</div>
+      </div>
+    </div>
+    <div class="sm-footer">
+      <button class="sm-btn" id="logoff-btn">🔒 Log Off</button>
+      <button class="sm-btn" id="shutdown-btn">⏻ Turn Off Computer</button>
+    </div>
+  </div>
+
+  <!-- Shutdown overlay -->
+  <div id="shutdown" hidden>
+    <div class="shutdown-msg">It is now safe to turn off your computer.<br /><small>(Click anywhere to reboot)</small></div>
+  </div>
+</div>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

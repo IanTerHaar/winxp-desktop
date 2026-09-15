@@ -1,0 +1,55 @@
+/* ============ Windows ============ */
+.window {
+  position: absolute;
+  background: #ece9d8;
+  border: 1px solid #0831d9;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+  min-width: 200px; min-height: 120px;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.window.inactive .titlebar { background: linear-gradient(180deg, #7a96df 0%, #6182d5 50%, #4c72c8 100%); }
+.window.maximized { border-radius: 0; }
+.titlebar {
+  height: 26px; background:
+    linear-gradient(180deg,
+      #0058e6 0%, #3a80f2 8%, #3a80f2 40%,
+      #1e5fd8 90%, #0044c0 100%);
+  color: #fff; display: flex; align-items: center; padding: 0 4px 0 6px;
+  cursor: move; font-weight: 700; text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+  border-radius: 6px 6px 0 0;
+}
+.titlebar-icon { margin-right: 4px; font-size: 14px; }
+.titlebar-text { flex: 1; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.titlebar-btns { display: flex; gap: 2px; }
+.tb-btn {
+  width: 22px; height: 20px;
+  background: linear-gradient(180deg, #429bff 0%, #1660e7 100%);
+  border: 1px solid #063e9d; color: #fff; border-radius: 3px;
+  font-size: 12px; font-weight: 700; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+}
+.tb-btn:hover { background: linear-gradient(180deg, #5aaeff, #2d7cff); }
+.tb-btn.close { background: linear-gradient(180deg, #e56060 0%, #a11a1a 100%); border-color: #6d0a0a; }
+.tb-btn.close:hover { background: linear-gradient(180deg, #ff7070, #c02020); }
+
+.menubar {
+  background: #ece9d8; border-bottom: 1px solid #ada998;
+  padding: 2px 4px; display: flex; gap: 8px;
+}
+.menubar span { padding: 2px 6px; font-size: 11px; cursor: pointer; }
+.menubar span:hover { background: #316ac5; color: #fff; }
+
+.window-body { flex: 1; background: #fff; overflow: auto; }
+.statusbar {
+  background: #ece9d8; border-top: 1px solid #ada998;
+  padding: 2px 6px; font-size: 11px; color: #333;
+}
+
+.resize-handle {
+  position: absolute; right: 0; bottom: 0; width: 14px; height: 14px;
+  cursor: nwse-resize; z-index: 10;
+  background:
+    linear-gradient(135deg, transparent 40%, #888 40%, #888 50%, transparent 50%, transparent 70%, #888 70%, #888 80%, transparent 80%);
+}
